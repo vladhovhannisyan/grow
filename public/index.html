@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="./css/style.css" rel="stylesheet">
+    
+    </head>
+    <body>
+        <div class="container mt-3"> 
+
+            <div>
+                <h2 class="text-center pt-3 pb-3 c-green">Grow Glide Admin</h2>
+            </div>
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Channel ID</th>
+                    <th scope="col">Channel Name</th>
+                    <th scope="col">Channel Type</th>
+                    <th scope="col">Archived status</th>
+                    <th scope="col">Slack User Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Permanent</th>
+                  </tr>
+                </thead>
+                <tbody id="t-body"></tbody>
+            </table>
+        </div>
+
+
+        <div class="modal fade" id="addToChannel" tabindex="-1" aria-labelledby="addToChannelLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addToChannelLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id="addToChannelModalBody" class="modal-body">
+
+                <label for="#" class="form-label fz14">Select channels</label>
+                <select id="singleChannels" style="height:170px" class="form-select select-list-channels mb23" multiple aria-label="multiple select ">
+                </select>
+
+                <label for="#" class="form-label fz14">Select channel groups</label>
+                <select id="groupChannels" style="height:170px" class="form-select select-list-channels-groups" multiple aria-label="multiple select ">
+                </select>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="sendInvitation" type="button" class="btn btn-primary"> Invite </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="modal fade" id="groupChannels" tabindex="-1" aria-labelledby="groupToChannels" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="groupToChannels">Group Channels</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id="addToChannelModalBody" class="modal-body">
+
+                <span class="errorMessage"></span><br>
+
+                <label for="newGroupName" class="form-label fz14">Group Name</label>
+                <input id="newGroupName" type="text" class="form-control mb23">
+
+                <label for="newGroupName" class="form-label fz14">Channels</label>
+                <select id="channelsToGroup" style="height:170px" class="form-select select-list-channels" multiple aria-label="multiple select ">
+                </select>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="createGroup" type="button" class="btn btn-primary" > Create Group </button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Create Group</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                
+
+                <span class="errorMessage"></span><br>
+
+                <label for="newGroupName" class="form-label fz14">Group Name</label>
+                <input id="newGroupName" type="text" class="form-control mb23">
+
+                <label for="newGroupName" class="form-label fz14">Channels</label>
+                <select id="channelsToGroup" style="height:170px" class="form-select select-list-channels" multiple aria-label="multiple select ">
+                </select>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="createGroup" type="button" class="btn btn-primary" > Create Group </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+
+
+</html>
